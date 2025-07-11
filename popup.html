@@ -16,6 +16,10 @@
                     <span class="btn-icon">ℹ️</span>
                     Info
                 </button>
+                <button id="authorBtn" class="header-btn" title="Show author information">
+                    <span class="btn-icon">👨‍💻</span>
+                    Author
+                </button>
                 <button id="copyAllBtn" class="header-btn">
                     <span class="btn-icon">📋</span>
                     Copy All
@@ -172,6 +176,51 @@
             <div class="modal-actions">
                 <button id="modalCancel" class="modal-btn cancel-btn">Cancel</button>
                 <button id="modalConfirm" class="modal-btn confirm-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Author Modal -->
+    <div id="authorModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>About the Author</h2>
+                <button class="close-modal" id="closeAuthorModal" aria-label="Close modal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="author-modal-content">
+                    <div class="author-avatar">
+                        <span class="author-emoji">👨‍💻</span>
+                    </div>
+                    <div class="author-details">
+                        <h3>@themrsami</h3>
+                        <p class="author-description">
+                            Developer passionate about privacy and user experience. 
+                            Created Smart Clipboard Manager to provide a secure, 
+                            local-first clipboard solution.
+                        </p>
+                        <div class="author-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Privacy Focus:</span>
+                                <span class="stat-value">100% Local Storage</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Open Source:</span>
+                                <span class="stat-value">MIT License</span>
+                            </div>
+                        </div>
+                        <div class="author-links-modal">
+                            <a href="https://github.com/themrsami" target="_blank" class="modal-link">
+                                <span class="link-icon">🔗</span>
+                                GitHub Profile
+                            </a>
+                            <a href="https://www.buymeacoffee.com/mrsami" target="_blank" class="modal-link support-link">
+                                <span class="link-icon">☕</span>
+                                Buy Me a Coffee
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

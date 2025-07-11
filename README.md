@@ -4,6 +4,21 @@
 
 ---
 
+## 👨‍💻 Author & Support
+
+<div align="center">
+
+### 🚀 **Created by [@themrsami](https://github.com/themrsami)**
+
+[![GitHub Profile](https://img.shields.io/badge/GitHub-themrsami-blue?style=for-the-badge&logo=github)](https://github.com/themrsami)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-mrsami-orange?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/mrsami)
+
+**Love this extension? Consider supporting its development!** ☕
+
+</div>
+
+---
+
 ## 🎯 Why Choose Smart Clipboard Manager?
 
 ### � **Privacy That Actually Matters**
@@ -163,6 +178,21 @@ Method 3: Select text + use Ctrl+Shift+C shortcut
 > **"We built this extension to solve our own privacy concerns with existing clipboard managers. Your data privacy isn't just a feature - it's the entire point."**
 
 **Install today and take control of your clipboard privacy!** 🚀
+
+---
+
+## 📄 License & Links
+
+<div align="center">
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-blue?style=for-the-badge&logo=google-chrome)](https://chrome.google.com/webstore)
+[![GitHub Stars](https://img.shields.io/github/stars/themrsami/smart-clipboard-chrome-extension?style=for-the-badge&logo=github)](https://github.com/themrsami/smart-clipboard-chrome-extension)
+
+**This project is open source under the MIT License**  
+Feel free to contribute, fork, or suggest improvements!
+
+</div>
 
 ---
 

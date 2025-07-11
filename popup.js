@@ -76,6 +76,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Handle author button in header
+    const authorBtn = document.getElementById('authorBtn');
+    const authorModal = document.getElementById('authorModal');
+    const closeAuthorModal = document.getElementById('closeAuthorModal');
+    
+    if (authorBtn && authorModal) {
+        authorBtn.addEventListener('click', () => {
+            authorModal.style.display = 'flex';
+        });
+    }
+    
+    if (closeAuthorModal && authorModal) {
+        closeAuthorModal.addEventListener('click', () => {
+            authorModal.style.display = 'none';
+        });
+    }
+    
+    // Close author modal when clicking outside
+    if (authorModal) {
+        authorModal.addEventListener('click', (e) => {
+            if (e.target === authorModal) {
+                authorModal.style.display = 'none';
+            }
+        });
+    }
+
     // Listen for storage changes
     chrome.storage.onChanged.addListener((changes, namespace) => {
         if (namespace === 'local' && (changes.clips || changes.trashedClips)) {

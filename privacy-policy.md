@@ -1,5 +1,10 @@
 # Smart Clipboard Manager - Privacy Policy
 
+> **Created by [@themrsami](https://github.com/themrsami) | Open Source & Privacy First**
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-mrsami-orange?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/mrsami)
+
 ## 🔒 Your Privacy is Protected - Here's How
 
 **Smart Clipboard Manager is designed with privacy-first principles. Everything stays on YOUR device, under YOUR control.**
@@ -95,7 +100,13 @@
 *"Love that it works offline and keeps my data private."* - Developer  
 *"Simple, secure, and doesn't feel creepy like other extensions."* - Privacy-conscious User  
 
-**Contact us** through the Chrome Web Store if you have any privacy questions.
+### 📞 **Contact the Developer:**
+- **GitHub**: [@themrsami](https://github.com/themrsami)
+- **Chrome Web Store**: Contact through extension page
+- **Support**: Open an issue on [GitHub Repository](https://github.com/themrsami/smart-clipboard-chrome-extension)
+
+### ☕ **Support Development:**
+If this extension helps you, consider [buying me a coffee](https://www.buymeacoffee.com/mrsami)!
 
 ---
 
