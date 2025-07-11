@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Clipboard Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 Smart Clipboard</h1>
+            <div class="header-actions">
+                <button id="infoBtn" class="header-btn" title="Show usage instructions">
+                    <span class="btn-icon">ℹ️</span>
+                    Info
+                </button>
+                <button id="copyAllBtn" class="header-btn">
+                    <span class="btn-icon">📋</span>
+                    Copy All
+                </button>
+                <button id="clearAll" class="header-btn">
+                    <span class="btn-icon">🧹</span>
+                    Clear
+                </button>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="clips">
+                <span class="btn-icon">📋</span>
+                Clips
+            </button>
+            <button class="tab-btn" data-tab="trash">
+                <span class="btn-icon">🗑️</span>
+                Trash
+            </button>
+            <button class="tab-btn" data-tab="settings">
+                <span class="btn-icon">⚙️</span>
+                Settings
+            </button>
+        </div>
+
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search clips..." aria-label="Search clips">
+            </div>
+        </div>
+
+        <div class="tab-content active" id="clipsTab">
+            <div class="usage-info" id="usageInfo" style="display: none;">
+                <div class="info-content">
+                    <span class="info-icon">💡</span>
+                    <div class="info-text">
+                        <strong>How to save clips:</strong>
+                        <ul>
+                            <li>Use Ctrl+C to copy text (auto-saves or shows save prompt)</li>
+                            <li>Use Ctrl+Shift+C to manually save selected text</li>
+                            <li>Right-click selected text → "Copy to Smart Clipboard"</li>
+                            <li>Set custom shortcuts in Settings</li>
+                        </ul>
+                    </div>
+                    <button class="close-info" id="closeInfoBtn">×</button>
+                </div>
+            </div>
+            <div id="clipsContainer" class="clips-container">
+                <!-- Clips will be displayed here -->
+            </div>
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <p>📋 No clips yet</p>
+                <p>Copy some text to get started!</p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="trashTab">
+            <div class="trash-header">
+                <h2>Deleted Clips</h2>
+                <div class="tab-actions">
+                    <button id="restoreAllBtn" class="action-btn" title="Restore all clips">♻️ Restore All</button>
+                    <button id="permanentDeleteBtn" class="action-btn" title="Empty trash">🗑️ Empty Trash</button>
+                </div>
+            </div>
+            <div id="trashContainer" class="clips-container">
+                <!-- Deleted clips will be displayed here -->
+            </div>
+            <div id="emptyTrash" class="empty-state" style="display: none;">
+                <p>🗑️ Trash is empty</p>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="settingsTab">
+            <div class="settings-content">
+                <section class="settings-section">
+                    <h2>Keyboard Shortcuts</h2>
+                    <div class="setting-item">
+                        <label>Extension Shortcut (Ctrl+Shift+C):</label>
+                        <p class="setting-description">Use Ctrl+Shift+C to manually save selected text to Smart Clipboard.</p>
+                    </div>
+                    <div class="setting-item">
+                        <label>Additional Copy Shortcut:</label>
+                        <div class="shortcut-recorder">
+                            <input type="text" id="copyShortcut" readonly placeholder="Click to record shortcut">
+                            <button id="clearShortcut">Clear</button>
+                        </div>
+                        <p class="setting-description">Click the input field and press your desired key combination for additional shortcut.</p>
+                    </div>
+                </section>
+                <section class="settings-section">
+                    <h2>General Settings</h2>
+                    <div class="setting-item">
+                        <label for="autoSave">Auto-save copied text (Ctrl+C):</label>
+                        <input type="checkbox" id="autoSave">
+                        <p class="setting-description">When enabled: Automatically saves copied text without asking. When disabled: Shows notification to save or discard.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Clear Modal -->
+    <div class="modal" id="clearModal" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Clear Clipboard History</h2>
+                <button class="close-modal" aria-label="Close modal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="clear-options">
+                    <button class="clear-option" data-option="all">
+                        <span class="option-icon">🗑️</span>
+                        <div class="option-text">
+                            <h3>Clear All</h3>
+                            <p>Remove all clipboard history</p>
+                        </div>
+                    </button>
+
+                    <button class="clear-option" data-option="older">
+                        <span class="option-icon">📅</span>
+                        <div class="option-text">
+                            <h3>Clear Older Items</h3>
+                            <p>Remove items older than 24 hours</p>
+                        </div>
+                    </button>
+
+                    <button class="clear-option" data-option="duplicates">
+                        <span class="option-icon">🔄</span>
+                        <div class="option-text">
+                            <h3>Remove Duplicates</h3>
+                            <p>Keep only unique items</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel-btn">Cancel</button>
+                <button class="modal-btn confirm-btn">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container" role="alert" aria-live="polite"></div>
+    <div id="toast" class="toast"></div>
+    
+    <!-- Confirmation Modal -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle"></h3>
+            <p id="modalMessage"></p>
+            <div class="modal-actions">
+                <button id="modalCancel" class="modal-btn cancel-btn">Cancel</button>
+                <button id="modalConfirm" class="modal-btn confirm-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="encryption.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

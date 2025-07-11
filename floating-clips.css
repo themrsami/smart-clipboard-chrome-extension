@@ -1,0 +1,139 @@
+/* Floating clips styles - isolated from main extension */
+.floating-clips-container {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    pointer-events: none !important;
+    z-index: 999999999 !important;
+}
+
+.floating-clip-card {
+    position: fixed !important;
+    min-width: 200px !important;
+    min-height: 100px !important;
+    max-width: 800px !important;
+    max-height: 600px !important;
+    width: 400px !important;
+    background: white !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    padding: 12px !important;
+    margin-bottom: 8px !important;
+    cursor: grab !important;
+    pointer-events: auto !important;
+    user-select: none !important;
+    transition: box-shadow 0.2s !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 999999999 !important;
+    overflow: auto !important;
+    box-sizing: border-box !important;
+}
+
+.floating-clip-card * {
+    box-sizing: border-box !important;
+}
+
+.floating-clip-card.resizing {
+    cursor: nw-resize !important;
+    transition: none !important;
+    user-select: none !important;
+}
+
+.floating-clip-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.clip-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-bottom: 8px !important;
+    user-select: none !important;
+}
+
+.clip-source-link {
+    flex: 1 !important;
+    color: #2563eb !important;
+    text-decoration: none !important;
+    font-size: 12px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    cursor: pointer !important;
+}
+
+.clip-source-link:hover {
+    text-decoration: underline !important;
+    color: #1d4ed8 !important;
+}
+
+.clip-timestamp {
+    color: #64748b !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
+}
+
+.clip-content {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    margin: 8px 0 !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    max-height: none !important;
+    overflow-y: auto !important;
+    color: #1e293b !important;
+    user-select: text !important;
+    width: 100% !important;
+}
+
+.clip-actions {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 8px !important;
+    margin-top: 8px !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+}
+
+.action-btn {
+    background: none !important;
+    border: none !important;
+    padding: 4px 8px !important;
+    cursor: pointer !important;
+    color: #64748b !important;
+    font-size: 12px !important;
+    border-radius: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    white-space: nowrap !important;
+}
+
+.action-btn:hover {
+    background: #f1f5f9 !important;
+    color: #334155 !important;
+}
+
+/* Resize handle at bottom-right */
+.resize-handle {
+    position: absolute !important;
+    width: 15px !important;
+    height: 15px !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    cursor: se-resize !important;
+    background-color: #e2e8f0 !important;
+    border-top-left-radius: 4px !important;
+    z-index: 1000000000 !important;
+}
+
+.drag-handle {
+    cursor: grab !important;
+    color: #94a3b8 !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+}
