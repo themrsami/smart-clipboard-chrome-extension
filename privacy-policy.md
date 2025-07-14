@@ -57,7 +57,7 @@
 |------------|----------------|--------------|
 | **Storage** | Save your clips locally | Stores clips on YOUR computer only |
 | **ActiveTab** | Read selected text | Only works when you activate the extension |
-| **ClipboardRead/Write** | Copy/paste functionality | Let you save and retrieve clipboard items |
+| **ClipboardWrite** | Copy/paste functionality | Let you save and retrieve clipboard items |
 | **ContextMenus** | Right-click options | Adds "Copy to Smart Clipboard" to menus |
 | **Scripting** | Keyboard shortcuts | Enables Ctrl+C detection on web pages |
 

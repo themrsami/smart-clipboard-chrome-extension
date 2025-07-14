@@ -1,14 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Smart Clipboard Manager",
-  "version": "2.0",
+  "version": "2.1",
   "description": "Secure local clipboard manager. Saves your copied text with timestamps and source info. No data leaves your device.",
   "permissions": [
     "storage",
     "activeTab",
     "scripting",
     "clipboardWrite",
-    "clipboardRead",
     "commands",
     "contextMenus",
     "notifications"
