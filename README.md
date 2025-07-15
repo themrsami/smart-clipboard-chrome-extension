@@ -143,16 +143,6 @@ Method 3: Select text + use Ctrl+Shift+C shortcut
 
 ---
 
-## 💬 What Users Are Saying
-
-> *"Finally! A clipboard manager that doesn't feel sketchy. Love that everything stays on my computer."* - Sarah, Developer
-
-> *"I handle sensitive client data daily. This extension gives me the clipboard functionality I need without the privacy concerns."* - Mike, Consultant  
-
-> *"Simple, clean, and trustworthy. Exactly what I was looking for after trying 5 other extensions that wanted too many permissions."* - Alex, Writer
-
----
-
 ## 🔧 Technical Specs
 
 - **Manifest Version**: v3 (Latest Chrome standard)
